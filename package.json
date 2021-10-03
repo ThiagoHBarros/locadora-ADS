@@ -1,6 +1,7 @@
 {
   "name": "locadora",
   "version": "1.0.0",
+  "type": "module",
   "description": "Backend NodeJS",
   "main": "index.js",
   "scripts": {
@@ -9,6 +10,7 @@
   "author": "Thiago Henrique",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "mssql": "^7.2.1"
   }
 }
