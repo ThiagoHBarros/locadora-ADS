@@ -1,0 +1,43 @@
+//Teste de requições REST - Veiculos
+@baseUrl = http://localhost:4000/api 
+@titulo = Tarantino
+###
+//GET - LISTA DE TODOS OS FILMES
+GET {{baseUrl}}/filmes
+Content-Type: application/json
+
+###
+// GET LISTA DE FILMES PELO TITULO
+GET {{baseUrl}}/filmes/{{titulo}}
+Content-Type: application/json 
+
+###
+
+//POST INCLUI UM NOVO FILME
+POST {{baseUrl}}/filmes
+Content-Type: application/json
+
+{
+    "titulo":"Shrek 2",
+    "preco": 10.90,
+    "diretor": "Robert Schulz",
+    "genero": "comédia/infantil",
+    
+}
+
+//PUT - ALTERA UM FILME EXISTENTE
+PUT {{baseUrl}}/filmes
+Content-Type: application/json
+
+{
+    "titulo":"Shrek 2",
+    "preco": 10.90,
+    "diretor": "Robert Schulz",
+    "genero": "comédia/infantil",
+    
+}
+
+###
+//DELETE - APAGA UM FILME ATRAVÉS DO CODIGO
+DELETE {{baseUrl}}/filmes/{{{{titulo}}}}
+Content-Type: application/json
